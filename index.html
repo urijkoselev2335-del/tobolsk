@@ -94,7 +94,7 @@ button { font: inherit; color: inherit; -webkit-tap-highlight-color: transparent
 .m-lab.big { font-size: 30px; font-style: italic; letter-spacing: .06em; }
 .m-lab.mid { font-size: 22px; letter-spacing: .14em; text-transform: uppercase; }
 .m-lab.river { font-size: 34px; font-style: italic; fill: #48655E; letter-spacing: .12em; }
-.m-halo { paint-order: stroke; stroke: #EFE6D1; stroke-width: 6px; stroke-linejoin: round; }
+svg.plan text.m-halo { fill: #EFE6D1; stroke: #EFE6D1; stroke-width: 6px; stroke-linejoin: round; }
 .m-deco { fill: none; stroke: #4A3A2C; stroke-width: 1.4; }
 .m-small { font-family: var(--serif); font-size: 15px; fill: #4A3A2C; }
 .pin { cursor: pointer; outline: none; }
@@ -107,12 +107,12 @@ button { font: inherit; color: inherit; -webkit-tap-highlight-color: transparent
 .pin .nm2 { display: none; }
 /* Телефон: год крупнее, название в две строки под ним */
 .plan:not(.wide) .pin .nm1 { display: none; }
-.plan:not(.wide) .pin .nm2 { display: inline; font-size: 21px; font-weight: 600; letter-spacing: -.01em; }
+.plan:not(.wide) .pin .nm2 { display: inline; font-size: 21px; font-weight: 600; }
 .plan:not(.wide) .pin .yr { font-size: 30px; }
 .plan:not(.wide) .pin .lab { transform: translate(var(--nx, 0px), var(--ny, 0px)); }
 .plan:not(.wide) .pin .a-start text { text-anchor: start; }
 .plan:not(.wide) .pin .a-end text { text-anchor: end; }
-.plan:not(.wide) .kreml { transform: translate(0px, 24px); }
+.plan:not(.wide) .kreml { transform: translate(0px, 32px); }
 .pin .body { transition: transform .18s ease; transform-box: view-box; }
 .plan:not(.wide) .pin .body { transform: scale(1.14); }
 .pin:hover .body, .pin:focus-visible .body { transform: scale(1.08); }
@@ -236,9 +236,9 @@ button { font: inherit; color: inherit; -webkit-tap-highlight-color: transparent
 <g class="m-wall"><path d="M560.3,271.5 560.5,273.8 564.8,283.5 568.9,321.5 569.4,336.1 567.3,349.4M557.2,345.6 560.2,340.2 562.3,333.6 562.1,320.3 559.0,289.1 557.6,284.2 554.9,279.9 553.3,278.4 551.5,278.0M573.7,107.8 563.2,131.2M536.6,221.7 543.1,208.0M508.8,209.8 535.0,222.1M561.5,169.9 562.8,167.0M550.4,192.7 554.8,183.9M467.7,161.6 498.7,97.5M694.9,301.4 689.1,298.8M708.6,319.7 709.1,313.4M707.6,334.9 706.4,350.6M708.3,351.0 706.4,350.6M706.4,350.6 705.5,350.4M705.5,350.4 704.0,350.1M704.6,354.3 705.5,350.4M702.6,413.9 706.3,362.8 706.0,355.0M667.3,430.5 697.9,417.7M583.0,376.0 581.0,383.7M584.9,367.8 585.9,361.8M575.4,357.9 580.2,359.9M608.1,264.6 610.3,258.3M604.5,274.9 599.8,287.8M580.8,91.8 590.1,96.2M578.4,90.7 580.8,91.8M580.8,91.8 573.7,107.8M562.8,167.0 573.4,144.3M549.2,195.1 550.4,192.7M582.5,387.7 602.8,390.6 618.0,393.8 621.5,401.9 623.2,403.3M626.7,406.4 643.4,419.7 662.6,430.9M623.2,403.3 621.5,404.2 620.8,405.6 621.7,408.5 624.6,409.2 626.0,408.3 626.7,406.4"/></g>
 <rect width="1000" height="856" filter="url(#paper)" fill="#000" pointer-events="none"/>
 <text class="m-lab river" transform="translate(70,250) rotate(-52)">Иртыш</text>
-<text class="m-lab mid m-halo" x="905" y="66" text-anchor="end">Нагорная часть</text>
-<text class="m-lab mid m-halo" x="480" y="702">Подгорная часть</text>
-<text class="m-lab big m-halo kreml" x="596" y="398">Кремль</text>
+<text class="m-lab mid m-halo" x="905" y="66" text-anchor="end" aria-hidden="true">Нагорная часть</text><text class="m-lab mid" x="905" y="66" text-anchor="end">Нагорная часть</text>
+<text class="m-lab mid m-halo" x="480" y="702" aria-hidden="true">Подгорная часть</text><text class="m-lab mid" x="480" y="702">Подгорная часть</text>
+<text class="m-lab big kreml m-halo" x="596" y="398" aria-hidden="true">Кремль</text><text class="m-lab big kreml" x="596" y="398">Кремль</text>
 <g transform="translate(110,100)"><circle class="m-deco" r="26"/><path d="M0,-40L7,0 0,-6 -7,0Z" fill="#4A3A2C"/><path d="M0,40L7,0 0,6 -7,0Z" class="m-deco"/><text class="m-small" x="0" y="-46" text-anchor="middle">С</text></g>
 <g transform="translate(40,820)"><path class="m-deco" d="M0,0h134M0,-6v12M134,-6v12M67,-4v8"/><text class="m-small" x="67" y="-12" text-anchor="middle">200 м</text></g>
 <g class="pin" data-id="bogo" tabindex="0" role="button">
@@ -251,7 +251,7 @@ button { font: inherit; color: inherit; -webkit-tap-highlight-color: transparent
 <path class="d" d="M14,35V29.5a2.0,2.0 0 0 1 4,0V35ZM38.5,50V44.5a2.5,2.5 0 0 1 5,0V50ZM13.5,51V45.5a2.5,2.5 0 0 1 5,0V51Z"/>
 <path class="ln" d="M2,58h60M3,53.5h20M3,53.5v4.5M8,53.5v4.5M13,53.5v4.5M18,53.5v4.5M54,53.5h8M58,53.5v4.5"/></svg>
 <g class="badge"><circle cx="534" cy="500" r="12"/><path class="v" d="M529,500l3.5,4 6.5-8"/><path class="x" d="M530,495l9,9m0-9l-9,9"/></g>
-<g class="lab a-middle" style="--nx:0px;--ny:0px"><text class="yr m-halo" x="507" y="591">1691</text><text class="nm nm1 m-halo" x="507" y="610">Богоявленская церковь</text><text class="nm nm2 m-halo" y="613"><tspan x="507">Богоявленская</tspan><tspan x="507" dy="1.08em">церковь</tspan></text></g></g></g><g class="pin" data-id="nikol" tabindex="0" role="button">
+<g class="lab a-start" style="--nx:48px;--ny:-82px"><text class="yr m-halo" x="507" y="591" aria-hidden="true">1691</text><text class="yr" x="507" y="591">1691</text><text class="nm nm1 m-halo" x="507" y="610" aria-hidden="true">Богоявленская церковь</text><text class="nm nm1" x="507" y="610">Богоявленская церковь</text><text class="nm nm2 m-halo" y="613" aria-hidden="true"><tspan x="507">Богоявленская</tspan><tspan x="507" dy="1.08em">церковь</tspan></text><text class="nm nm2" y="613"><tspan x="507">Богоявленская</tspan><tspan x="507" dy="1.08em">церковь</tspan></text></g></g></g><g class="pin" data-id="nikol" tabindex="0" role="button">
 <line class="leader" x1="749" y1="298" x2="657" y2="258"/><circle class="spot" cx="749" cy="298" r="4.5"/>
 <g class="body" style="transform-origin:657px 258px"><circle class="ring" cx="657" cy="258" r="44"/><circle class="disc" cx="657" cy="258" r="38"/>
 <svg class="ico" x="630" y="229" width="54" height="54" viewBox="0 0 64 64"><path class="hill" d="M1,62C12,51 26,47.5 63,46.5V62Z"/>
@@ -260,7 +260,7 @@ button { font: inherit; color: inherit; -webkit-tap-highlight-color: transparent
 <path d="M29,31v-8h12v8Z"/><path d="M28,23c0-8.5 14-8.5 14,0Z"/><path class="ln" d="M35,15.5v-7M32.8,10.5h4.4"/>
 <path class="d" d="M32.5,43V37.5a2.5,2.5 0 0 1 5,0V43ZM24,43V37.5a2.0,2.0 0 0 1 4,0V43ZM14,41V35.5a1.5,1.5 0 0 1 3,0V41Z"/></svg>
 <g class="badge"><circle cx="684" cy="230" r="12"/><path class="v" d="M679,230l3.5,4 6.5-8"/><path class="x" d="M680,226l9,9m0-9l-9,9"/></g>
-<g class="lab a-middle" style="--nx:0px;--ny:0px"><text class="yr m-halo" x="657" y="322">1714</text><text class="nm nm1 m-halo" x="657" y="341">Никольская церковь</text><text class="nm nm2 m-halo" y="344"><tspan x="657">Никольская</tspan><tspan x="657" dy="1.08em">церковь</tspan></text></g></g></g><g class="pin" data-id="zahar" tabindex="0" role="button">
+<g class="lab a-middle" style="--nx:0px;--ny:0px"><text class="yr m-halo" x="657" y="322" aria-hidden="true">1714</text><text class="yr" x="657" y="322">1714</text><text class="nm nm1 m-halo" x="657" y="341" aria-hidden="true">Никольская церковь</text><text class="nm nm1" x="657" y="341">Никольская церковь</text><text class="nm nm2 m-halo" y="344" aria-hidden="true"><tspan x="657">Никольская</tspan><tspan x="657" dy="1.08em">церковь</tspan></text><text class="nm nm2" y="344"><tspan x="657">Никольская</tspan><tspan x="657" dy="1.08em">церковь</tspan></text></g></g></g><g class="pin" data-id="zahar" tabindex="0" role="button">
 <line class="leader" x1="278" y1="508" x2="233" y2="583"/><circle class="spot" cx="278" cy="508" r="4.5"/>
 <g class="body" style="transform-origin:233px 583px"><circle class="ring" cx="233" cy="583" r="44"/><circle class="disc" cx="233" cy="583" r="38"/>
 <svg class="ico" x="206" y="554" width="54" height="54" viewBox="0 0 64 64"><path d="M28,58V34h26v24Z"/><path d="M30,34v-6h20v6Z"/>
@@ -271,7 +271,7 @@ button { font: inherit; color: inherit; -webkit-tap-highlight-color: transparent
 <path class="d" d="M18,33V27.5a2.5,2.5 0 0 1 5,0V33ZM36,52V46.5a2.5,2.5 0 0 1 5,0V52ZM43.5,52V46.5a2.5,2.5 0 0 1 5,0V52ZM18.5,55V49.5a2.0,2.0 0 0 1 4,0V55Z"/>
 <path class="ln" d="M3,58h58"/></svg>
 <g class="badge"><circle cx="260" cy="555" r="12"/><path class="v" d="M255,555l3.5,4 6.5-8"/><path class="x" d="M256,551l9,9m0-9l-9,9"/></g>
-<g class="lab a-start" style="--nx:48px;--ny:-82px"><text class="yr m-halo" x="233" y="647">1757</text><text class="nm nm1 m-halo" x="233" y="666">Захарии и Елизаветы</text><text class="nm nm2 m-halo" y="669"><tspan x="233">Захарии и</tspan><tspan x="233" dy="1.08em">Елизаветы</tspan></text></g></g></g><g class="pin" data-id="dvorets" tabindex="0" role="button">
+<g class="lab a-start" style="--nx:48px;--ny:-82px"><text class="yr m-halo" x="233" y="647" aria-hidden="true">1757</text><text class="yr" x="233" y="647">1757</text><text class="nm nm1 m-halo" x="233" y="666" aria-hidden="true">Захарии и Елизаветы</text><text class="nm nm1" x="233" y="666">Захарии и Елизаветы</text><text class="nm nm2 m-halo" y="669" aria-hidden="true"><tspan x="233">Захарии и</tspan><tspan x="233" dy="1.08em">Елизаветы</tspan></text><text class="nm nm2" y="669"><tspan x="233">Захарии и</tspan><tspan x="233" dy="1.08em">Елизаветы</tspan></text></g></g></g><g class="pin" data-id="dvorets" tabindex="0" role="button">
 <line class="leader" x1="496" y1="328" x2="401" y2="316"/><circle class="spot" cx="496" cy="328" r="4.5"/>
 <g class="body" style="transform-origin:401px 316px"><circle class="ring" cx="401" cy="316" r="44"/><circle class="disc" cx="401" cy="316" r="38"/>
 <svg class="ico" x="374" y="287" width="54" height="54" viewBox="0 0 64 64"><path d="M17,20v-5h3.5v5M43.5,20v-5h3.5v5"/>
@@ -279,7 +279,7 @@ button { font: inherit; color: inherit; -webkit-tap-highlight-color: transparent
 <path class="d" d="M10,34h3.4v5h-3.4ZM10,46h3.4v5h-3.4ZM17.5,34h3.4v5h-3.4ZM17.5,46h3.4v5h-3.4ZM25,34h3.4v5h-3.4ZM25,46h3.4v5h-3.4ZM36,34h3.4v5h-3.4ZM36,46h3.4v5h-3.4ZM43.5,34h3.4v5h-3.4ZM43.5,46h3.4v5h-3.4ZM51,34h3.4v5h-3.4ZM51,46h3.4v5h-3.4ZM29,57v-9h6v9Z"/>
 <path class="ln" d="M2,57h60"/></svg>
 <g class="badge"><circle cx="428" cy="289" r="12"/><path class="v" d="M423,289l3.5,4 6.5-8"/><path class="x" d="M424,284l9,9m0-9l-9,9"/></g>
-<g class="lab a-middle" style="--nx:0px;--ny:0px"><text class="yr m-halo" x="401" y="380">1782</text><text class="nm nm1 m-halo" x="401" y="399">Дворец наместника</text><text class="nm nm2 m-halo" y="402"><tspan x="401">Дворец</tspan><tspan x="401" dy="1.08em">наместника</tspan></text></g></g></g><g class="pin" data-id="gubdom" tabindex="0" role="button">
+<g class="lab a-middle" style="--nx:0px;--ny:0px"><text class="yr m-halo" x="401" y="380" aria-hidden="true">1782</text><text class="yr" x="401" y="380">1782</text><text class="nm nm1 m-halo" x="401" y="399" aria-hidden="true">Дворец наместника</text><text class="nm nm1" x="401" y="399">Дворец наместника</text><text class="nm nm2 m-halo" y="402" aria-hidden="true"><tspan x="401">Дворец</tspan><tspan x="401" dy="1.08em">наместника</tspan></text><text class="nm nm2" y="402"><tspan x="401">Дворец</tspan><tspan x="401" dy="1.08em">наместника</tspan></text></g></g></g><g class="pin" data-id="gubdom" tabindex="0" role="button">
 <line class="leader" x1="269" y1="714" x2="344" y2="709"/><circle class="spot" cx="269" cy="714" r="4.5"/>
 <g class="body" style="transform-origin:344px 709px"><circle class="ring" cx="344" cy="709" r="44"/><circle class="disc" cx="344" cy="709" r="38"/>
 <svg class="ico" x="317" y="680" width="54" height="54" viewBox="0 0 64 64"><path d="M8,57V22h48v35Z"/>
@@ -289,7 +289,7 @@ button { font: inherit; color: inherit; -webkit-tap-highlight-color: transparent
 <path class="d" d="M12,26h3.6v6h-3.6ZM12,43h3.6v6h-3.6ZM19,26h3.6v6h-3.6ZM19,43h3.6v6h-3.6ZM41.4,26h3.6v6h-3.6ZM41.4,43h3.6v6h-3.6ZM48.4,26h3.6v6h-3.6ZM48.4,43h3.6v6h-3.6ZM29.5,57v-10h5v10Z"/>
 <path class="ln" d="M2,57h60"/></svg>
 <g class="badge"><circle cx="371" cy="681" r="12"/><path class="v" d="M366,681l3.5,4 6.5-8"/><path class="x" d="M366,677l9,9m0-9l-9,9"/></g>
-<g class="lab a-middle" style="--nx:0px;--ny:0px"><text class="yr m-halo" x="344" y="773">1790-е</text><text class="nm nm1 m-halo" x="344" y="792">Губернаторский дом</text><text class="nm nm2 m-halo" y="795"><tspan x="344">Губернаторский</tspan><tspan x="344" dy="1.08em">дом</tspan></text></g></g></g><g class="pin" data-id="tyurma" tabindex="0" role="button">
+<g class="lab a-middle" style="--nx:0px;--ny:0px"><text class="yr m-halo" x="344" y="773" aria-hidden="true">1790-е</text><text class="yr" x="344" y="773">1790-е</text><text class="nm nm1 m-halo" x="344" y="792" aria-hidden="true">Губернаторский дом</text><text class="nm nm1" x="344" y="792">Губернаторский дом</text><text class="nm nm2 m-halo" y="795" aria-hidden="true"><tspan x="344">Губернаторский</tspan><tspan x="344" dy="1.08em">дом</tspan></text><text class="nm nm2" y="795"><tspan x="344">Губернаторский</tspan><tspan x="344" dy="1.08em">дом</tspan></text></g></g></g><g class="pin" data-id="tyurma" tabindex="0" role="button">
 <line class="leader" x1="541" y1="172" x2="466" y2="112"/><circle class="spot" cx="541" cy="172" r="4.5"/>
 <g class="body" style="transform-origin:466px 112px"><circle class="ring" cx="466" cy="112" r="44"/><circle class="disc" cx="466" cy="112" r="38"/>
 <svg class="ico" x="439" y="83" width="54" height="54" viewBox="0 0 64 64"><path d="M3,57V34h58v23Z"/>
@@ -298,7 +298,7 @@ button { font: inherit; color: inherit; -webkit-tap-highlight-color: transparent
 <circle class="d" cx="32" cy="22.5" r="1.8"/>
 <path class="ln" d="M1,57h62"/></svg>
 <g class="badge"><circle cx="493" cy="85" r="12"/><path class="v" d="M488,85l3.5,4 6.5-8"/><path class="x" d="M489,80l9,9m0-9l-9,9"/></g>
-<g class="lab a-middle" style="--nx:0px;--ny:0px"><text class="yr m-halo" x="466" y="176">1838</text><text class="nm nm1 m-halo" x="466" y="195">Тюремный замок</text><text class="nm nm2 m-halo" y="198"><tspan x="466">Тюремный</tspan><tspan x="466" dy="1.08em">замок</tspan></text></g></g></g><g class="pin" data-id="ermak" tabindex="0" role="button">
+<g class="lab a-middle" style="--nx:0px;--ny:0px"><text class="yr m-halo" x="466" y="176" aria-hidden="true">1838</text><text class="yr" x="466" y="176">1838</text><text class="nm nm1 m-halo" x="466" y="195" aria-hidden="true">Тюремный замок</text><text class="nm nm1" x="466" y="195">Тюремный замок</text><text class="nm nm2 m-halo" y="198" aria-hidden="true"><tspan x="466">Тюремный</tspan><tspan x="466" dy="1.08em">замок</tspan></text><text class="nm nm2" y="198"><tspan x="466">Тюремный</tspan><tspan x="466" dy="1.08em">замок</tspan></text></g></g></g><g class="pin" data-id="ermak" tabindex="0" role="button">
 <line class="leader" x1="803" y1="373" x2="868" y2="428"/><circle class="spot" cx="803" cy="373" r="4.5"/>
 <g class="body" style="transform-origin:868px 428px"><circle class="ring" cx="868" cy="428" r="44"/><circle class="disc" cx="868" cy="428" r="38"/>
 <svg class="ico" x="841" y="399" width="54" height="54" viewBox="0 0 64 64"><path d="M20,58v-4h24v4Z"/><path d="M23,54v-4h18v4Z"/><path d="M26,50v-6h12v6Z"/>
@@ -307,7 +307,7 @@ button { font: inherit; color: inherit; -webkit-tap-highlight-color: transparent
 <path class="ln" d="M6,58v-8M58,58v-8M6,51.5c4,4 10,4 14,2.5M58,51.5c-4,4 -10,4 -14,2.5"/>
 <path class="ln" d="M2,58h60"/></svg>
 <g class="badge"><circle cx="895" cy="400" r="12"/><path class="v" d="M890,400l3.5,4 6.5-8"/><path class="x" d="M891,396l9,9m0-9l-9,9"/></g>
-<g class="lab a-middle" style="--nx:-8px;--ny:0px"><text class="yr m-halo" x="868" y="492">1839</text><text class="nm nm1 m-halo" x="868" y="511">Памятник Ермаку</text><text class="nm nm2 m-halo" y="514"><tspan x="868">Памятник</tspan><tspan x="868" dy="1.08em">Ермаку</tspan></text></g></g></g><g class="pin" data-id="muzey" tabindex="0" role="button">
+<g class="lab a-middle" style="--nx:-8px;--ny:0px"><text class="yr m-halo" x="868" y="492" aria-hidden="true">1839</text><text class="yr" x="868" y="492">1839</text><text class="nm nm1 m-halo" x="868" y="511" aria-hidden="true">Памятник Ермаку</text><text class="nm nm1" x="868" y="511">Памятник Ермаку</text><text class="nm nm2 m-halo" y="514" aria-hidden="true"><tspan x="868">Памятник</tspan><tspan x="868" dy="1.08em">Ермаку</tspan></text><text class="nm nm2" y="514"><tspan x="868">Памятник</tspan><tspan x="868" dy="1.08em">Ермаку</tspan></text></g></g></g><g class="pin" data-id="muzey" tabindex="0" role="button">
 <line class="leader" x1="808" y1="224" x2="863" y2="154"/><circle class="spot" cx="808" cy="224" r="4.5"/>
 <g class="body" style="transform-origin:863px 154px"><circle class="ring" cx="863" cy="154" r="44"/><circle class="disc" cx="863" cy="154" r="38"/>
 <svg class="ico" x="836" y="125" width="54" height="54" viewBox="0 0 64 64"><path d="M6,57V36h18v21Z"/><path d="M40,57V36h18v21Z"/>
@@ -317,7 +317,7 @@ button { font: inherit; color: inherit; -webkit-tap-highlight-color: transparent
 <path class="d" d="M29.5,54V48.5a2.5,2.5 0 0 1 5,0V54ZM29.5,42V36.5a2.5,2.5 0 0 1 5,0V42ZM9,53V47.5a2.0,2.0 0 0 1 4,0V53ZM16,53V47.5a2.0,2.0 0 0 1 4,0V53ZM44,53V47.5a2.0,2.0 0 0 1 4,0V53ZM51,53V47.5a2.0,2.0 0 0 1 4,0V53Z"/>
 <path class="ln" d="M2,57h60"/></svg>
 <g class="badge"><circle cx="890" cy="127" r="12"/><path class="v" d="M885,127l3.5,4 6.5-8"/><path class="x" d="M886,122l9,9m0-9l-9,9"/></g>
-<g class="lab a-middle" style="--nx:-10px;--ny:0px"><text class="yr m-halo" x="863" y="218">1887</text><text class="nm nm1 m-halo" x="863" y="237">Губернский музей</text><text class="nm nm2 m-halo" y="240"><tspan x="863">Губернский</tspan><tspan x="863" dy="1.08em">музей</tspan></text></g></g></g></svg></div>
+<g class="lab a-middle" style="--nx:-10px;--ny:0px"><text class="yr m-halo" x="863" y="218" aria-hidden="true">1887</text><text class="yr" x="863" y="218">1887</text><text class="nm nm1 m-halo" x="863" y="237" aria-hidden="true">Губернский музей</text><text class="nm nm1" x="863" y="237">Губернский музей</text><text class="nm nm2 m-halo" y="240" aria-hidden="true"><tspan x="863">Губернский</tspan><tspan x="863" dy="1.08em">музей</tspan></text><text class="nm nm2" y="240"><tspan x="863">Губернский</tspan><tspan x="863" dy="1.08em">музей</tspan></text></g></g></g></svg></div>
       <p class="map-note">Основа плана: © <a href="https://www.openstreetmap.org/copyright">участники OpenStreetMap</a>. Положение построек показано приблизительно.</p>
     </div>
     <footer class="foot">
